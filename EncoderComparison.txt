@@ -1,0 +1,15 @@
+Comparison of Huffman Encoding Performance: Heap vs Naive Tree Building
+=====================================================================================
+Filename                  | Size (KB)  | Heap Time (ms)  | Naive Time (ms) | Diff (ms) 
+-------------------------------------------------------------------------------------
+ProseSize_1.txt           | 1.73       | 2.03            | 2.15            | 0.12      
+ProseSize_10.txt          | 17.30      | 5.64            | 4.66            | -0.98     
+ProseSize_100.txt         | 173.05     | 50.38           | 31.69           | -18.69    
+ProseSize_500.txt         | 865.23     | 528.28          | 512.94          | -15.34    
+ProseSize_1000.txt        | 1730.47    | 1844.89         | 1855.71         | 10.82     
+ProseSize_5000.txt        | 8652.34    | 40754.03        | 49471.15        | 8717.12   
+ProseSize_10000.txt       | 17304.69   | 163194.61       | 168672.10       | 5477.49   
+
+Note: The Heap implementation uses O(n log n) for tree building, while the Naive uses O(n^2).
+'n' is the number of unique characters (alphabet size).
+For larger files, the O(N) scanning and encoding time (where N is file size) will dominate.

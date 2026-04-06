@@ -1,0 +1,5 @@
+HighRedundancy.txt: SUCCESS | Size: 1000->139 | Savings: 86.10% | BPC: 1.11 | EncTime: 2.05ms | DecTime: 2.00ms
+EnglishProse.txt: SUCCESS | Size: 46200->25313 | Savings: 45.21% | BPC: 4.43 | EncTime: 18.29ms | DecTime: 31.93ms
+SourceCode.py: SUCCESS | Size: 7915->5062 | Savings: 36.05% | BPC: 5.24 | EncTime: 1.58ms | DecTime: 7.25ms
+ShortString.txt: SUCCESS | Size: 11->71 | Savings: -545.45% | BPC: 51.64 | EncTime: 1.55ms | DecTime: 0.00ms
+RandomASCII.txt: SUCCESS | Size: 5000->4965 | Savings: 0.70% | BPC: 7.94 | EncTime: 8.72ms | DecTime: 37.65ms
