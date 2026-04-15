@@ -42,7 +42,7 @@ def prepare_complexity_tests():
     
     # I want to test how the algorithm performs as files get bigger.
     # target_repetitions defines how many times I repeat the text block.
-    target_repetitions = [1, 10, 50, 200, 500, 1000, 2000, 5000, 8000, 10000]
+    target_repetitions = [1, 10, 50, 100, 200, 500, 1000, 2000, 5000, 8000, 10000]
     file_list = []
 
     for i, count in enumerate(target_repetitions):
