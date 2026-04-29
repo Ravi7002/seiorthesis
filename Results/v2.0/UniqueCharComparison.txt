@@ -1,0 +1,26 @@
+Comparison of Huffman Encoding: Heap vs Naive (Varying Unique Characters)
+=========================================================================================================
+Each file has the same total size (~500 KB) but a different number of unique
+characters. This isolates the O(n log n) vs O(n^2) tree-building cost.
+A positive Diff means Naive is SLOWER than Heap.
+
+Filename                  | Unique Chars  | Size (KB)  | Heap Time (ms)   | Naive Time (ms)  | Diff (ms) 
+---------------------------------------------------------------------------------------------------------
+UniqueChars_2.txt         | 2             | 488.3      | 94.19            | 79.46            | -14.73    
+UniqueChars_4.txt         | 4             | 488.3      | 177.96           | 176.01           | -1.95     
+UniqueChars_8.txt         | 8             | 488.3      | 175.22           | 129.26           | -45.96    
+UniqueChars_16.txt        | 16            | 518.8      | 166.31           | 169.37           | 3.06      
+UniqueChars_32.txt        | 32            | 503.5      | 177.75           | 187.32           | 9.56      
+UniqueChars_64.txt        | 64            | 495.9      | 200.52           | 209.69           | 9.17      
+UniqueChars_128.txt       | 128           | 492.1      | 159.10           | 181.82           | 22.71     
+UniqueChars_200.txt       | 200           | 666.5      | 163.87           | 183.88           | 20.01     
+UniqueChars_256.txt       | 256           | 734.3      | 174.87           | 171.51           | -3.36     
+
+Notes:
+  - 'n' = number of unique characters (alphabet size).
+  - Heap tree building: O(n log n)
+  - Naive tree building: O(n^2)  [linear scan for minimum each step]
+  - As n grows, the gap between Heap and Naive should widen.
+  - All files are ~500 KB to keep encoding time (O(N)) roughly constant.
+  - Run order alternates per file (even=Heap first, odd=Naive first) to
+    cancel out OS page-cache bias from reading the same file twice.

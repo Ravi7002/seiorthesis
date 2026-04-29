@@ -1,5 +1,7 @@
 # --- IMPORT SECTION ---
 import os      # For file path management.
+import sys
+sys.path.append(r"c:\Coding\SeniorThesis\Core\Optimized")
 import time    # To measure performance (how long tasks take).
 from EncoderNaive import NaiveHuffmanEncoder # My naive compression tool.
 from Decoder import HuffmanDecoder # My decompression utility.
@@ -7,7 +9,7 @@ from Decoder import HuffmanDecoder # My decompression utility.
 # --- CONFIGURATION ---
 DATA_DIR = "TimeComplexitySource"
 PROCESSED_DIR = "TimeComplexityProcessed"
-RESULT_FILE = "TimeComplexityNaive.txt"
+RESULT_FILE = r"c:\Coding\SeniorThesis\Results\v2.0\TimeComplexityNaive.txt"
 
 # --- STEP 1: LOAD EXPERIMENT DATA ---
 def get_test_files():

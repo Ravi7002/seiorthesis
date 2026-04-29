@@ -13,7 +13,7 @@ from EncoderNaive import NaiveHuffmanEncoder
 # --- CONFIGURATION ---
 DATA_DIR = os.path.join(BASE_DIR, "TimeComplexitySource")
 PROCESSED_DIR = os.path.join(BASE_DIR, "TimeComplexityProcessed")
-COMPARISON_FILE = os.path.join(BASE_DIR, "Results", "UnoptimizedTest", "Heap&Naive.txt")
+COMPARISON_FILE = os.path.join(BASE_DIR, "Results", "v2.0", "Heap&Naive.txt")
 
 # Sample text to build files from
 TEXT_BLOCK = """
@@ -44,7 +44,7 @@ def prepare_test_files():
         os.makedirs(PROCESSED_DIR)
     
     # Range of repetitions to create different file sizes
-    target_repetitions = [1, 10, 100, 500, 1000, 2000]
+    target_repetitions = [100, 1000, 6000]
     paths = []
 
     for count in target_repetitions:

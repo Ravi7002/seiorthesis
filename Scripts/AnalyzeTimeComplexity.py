@@ -1,7 +1,7 @@
 # --- IMPORT SECTION ---
 import os      # For file path management.
 import sys
-sys.path.append(r"c:\Coding\SeniorThesis\Core\Unoptimized")
+sys.path.append(r"c:\Coding\SeniorThesis\Core\Optimized")
 import time    # To measure performance (how long tasks take).
 from Encoder import HuffmanEncoder # My compression utility.
 from Decoder import HuffmanDecoder # My decompression utility.
@@ -10,7 +10,7 @@ from Decoder import HuffmanDecoder # My decompression utility.
 # Where to find data and where to save results.
 DATA_DIR = "TimeComplexitySource"
 PROCESSED_DIR = "TimeComplexityProcessed"
-RESULT_FILE = r"c:\Coding\SeniorThesis\Results\UnoptimizedTest\TimeComplexityTest.txt"
+RESULT_FILE = r"c:\Coding\SeniorThesis\Results\v2.0\TimeComplexityTest.txt"
 
 # A sample text block to be used for generating test files.
 TEXT_BLOCK = """
@@ -45,7 +45,7 @@ def prepare_complexity_tests():
     # I want to test how the algorithm performs as files get bigger.
     # target_repetitions defines how many times I repeat the text block.
     # 1772 bytes/block -> 11287 ~ 20MB, 22573 ~ 40MB, 45147 ~ 80MB
-    target_repetitions = [1, 10, 50, 100, 200, 500, 1000, 2000]
+    target_repetitions = [100, 500, 1000, 2000, 5000, 10000]
     file_list = []
 
     for i, count in enumerate(target_repetitions):
