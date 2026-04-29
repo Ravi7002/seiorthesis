@@ -4,15 +4,16 @@ import json
 import sys
 
 BASE_DIR = r"c:\Coding\SeniorThesis"
-sys.path.append(os.path.join(BASE_DIR, "Core"))
-
+sys.path.append(os.path.join(BASE_DIR, "Core", "Unoptimized"))
 from Encoder import HuffmanEncoder
+
+sys.path.insert(0, os.path.join(BASE_DIR, "Core", "Optimized"))
 from EncoderNaive import NaiveHuffmanEncoder
 
 # --- CONFIGURATION ---
 DATA_DIR = os.path.join(BASE_DIR, "TimeComplexitySource")
 PROCESSED_DIR = os.path.join(BASE_DIR, "TimeComplexityProcessed")
-COMPARISON_FILE = os.path.join(BASE_DIR, "Results", "Heap&Naive.txt")
+COMPARISON_FILE = os.path.join(BASE_DIR, "Results", "UnoptimizedTest", "Heap&Naive.txt")
 
 # Sample text to build files from
 TEXT_BLOCK = """
@@ -43,7 +44,7 @@ def prepare_test_files():
         os.makedirs(PROCESSED_DIR)
     
     # Range of repetitions to create different file sizes
-    target_repetitions = [1, 10, 100, 500, 1000, 5000, 10000]
+    target_repetitions = [1, 10, 100, 500, 1000, 2000]
     paths = []
 
     for count in target_repetitions:

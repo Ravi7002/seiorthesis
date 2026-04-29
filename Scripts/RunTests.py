@@ -1,5 +1,7 @@
 # --- IMPORT SECTION ---
 import os      # For path and folder management.
+import sys
+sys.path.append(r"c:\Coding\SeniorThesis\Core\Unoptimized")
 import random  # To generate random data for testing.
 import string  # To get lists of letters and symbols easily.
 import time    # To measure how fast my code is.
@@ -52,7 +54,7 @@ def create_tests():
 
     # TEST CASE 3: Source Code
     # Let's see how it handles Python code!
-    with open("Encoder.py", "r") as src:
+    with open(r"c:\Coding\SeniorThesis\Core\Unoptimized\Encoder.py", "r") as src:
         content = src.read()
     with open(os.path.join(SOURCE_DIR, "SourceCode.py"), "w", encoding='utf-8') as f:
         f.write(content)
@@ -83,7 +85,7 @@ def run_tests():
     decoder = HuffmanDecoder()
 
     # I'll save the results of my experiment in this text file.
-    with open("test_status.txt", "w") as status_file:
+    with open(r"c:\Coding\SeniorThesis\Results\UnoptimizedTest\test_status.txt", "w") as status_file:
         for filename in files:
             original_path = os.path.join(SOURCE_DIR, filename)
             base_name = os.path.splitext(filename)[0]
