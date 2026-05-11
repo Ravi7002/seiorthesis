@@ -86,6 +86,7 @@ def run_comparison(file_paths):
         print(f"{filename:<25} | {size_kb:<10.2f} | {heap_time:<15.2f} | {naive_time:<15.2f} | {diff:<10.2f}")
 
     # Save to file
+    os.makedirs(os.path.dirname(COMPARISON_FILE), exist_ok=True)
     with open(COMPARISON_FILE, "w") as f:
         f.write("Comparison of Huffman Encoding Performance: Heap vs Naive Tree Building\n")
         f.write("=" * 85 + "\n")

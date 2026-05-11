@@ -116,6 +116,7 @@ def run_comparison(file_paths):
         print(row)
 
     # --- Write to result file ---
+    os.makedirs(os.path.dirname(RESULT_FILE), exist_ok=True)
     with open(RESULT_FILE, "w", encoding="utf-8") as f:
         f.write("Comparison of Huffman Encoding: Heap vs Naive (Varying Unique Characters)\n")
         f.write("=" * len(header) + "\n")

@@ -64,6 +64,7 @@ def run_complexity_analysis(files):
     decoder = HuffmanDecoder()
     
     # Open the result file to write the table.
+    os.makedirs(os.path.dirname(RESULT_FILE), exist_ok=True)
     with open(RESULT_FILE, "w") as out:
         # Header for the table.
         out.write(f"{'Filename':<25} | {'Size (Bytes)':<12} | {'Enc Time (ms)':<15} | {'Dec Time (ms)':<15}\n")

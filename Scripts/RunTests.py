@@ -85,6 +85,7 @@ def run_tests():
     decoder = HuffmanDecoder()
 
     # I'll save the results of my experiment in this text file.
+    os.makedirs(os.path.dirname(r"c:\Coding\SeniorThesis\Results\UnoptimizedTest\test_status.txt"), exist_ok=True)
     with open(r"c:\Coding\SeniorThesis\Results\UnoptimizedTest\test_status.txt", "w") as status_file:
         for filename in files:
             original_path = os.path.join(SOURCE_DIR, filename)
